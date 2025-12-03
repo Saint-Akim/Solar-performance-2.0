@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Southern Paarl Energy</title>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <div class="avatar">HA</div>
+        <div>
+          <h1>Southern Paarl Energy</h1>
+          <p>Solar • Generator • Factory • Billing Dashboard</p>
+        </div>
+      </div>
+      <button id="theme-toggle">Dark Mode</button>
+    </header>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="solar">Solar</button>
+      <button class="tab-btn" data-tab="generator">Generator</button>
+      <button class="tab-btn" data-tab="factory">Factory</button>
+      <button class="tab-btn" data-tab="kehua">Kehua</button>
+      <button class="tab-btn" data-tab="billing">Billing</button>
+    </div>
+
+    <!-- Content -->
+    <div id="solar" class="tab-content active">
+      <div class="card">
+        <h2>Solar Output – May 2025</h2>
+        <div id="solar-chart"></div>
+      </div>
+    </div>
+
+    <div id="generator" class="tab-content">
+      <div class="card">
+        <h2>Generator Performance</h2>
+        <div class="grid-2">
+          <div id="fuel-chart"></div>
+          <div id="runtime-chart"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="factory" class="tab-content">
+      <div class="card">
+        <h2>Daily Factory Consumption</h2>
+        <div id="factory-chart"></div>
+      </div>
+    </div>
+
+    <div id="kehua" class="tab-content">
+      <div class="card">
+        <h2>Kehua Internal Power</h2>
+        <div id="kehua-chart"></div>
+      </div>
+    </div>
+
+    <div id="billing" class="tab-content">
+      <div class="card">
+        <h2>Billing Editor – September 2025</h2>
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8eS8a0G3eQ0g2g7f8zZ9vK7eR8d8f9g0h1j2k3l4m5n6o7p8q9r0s1t2u3v4w5x6y7z8a9b0c1d2e3f4g5h/pubhtml?widget=true&amp;headers=false"
+                width="100%" height="600" style="border:none; border-radius:12px;"></iframe>
+        <div style="text-align:center; margin-top:20px;">
+          <a href="https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit" target="_blank" class="btn">
+            Open Full Editor in Google Sheets
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Built with love by Hussein Akim • Durr Bottling • December 2025
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
